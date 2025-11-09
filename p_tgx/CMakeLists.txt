@@ -56,7 +56,9 @@ target_sources(pgx PUBLIC
 
     # ${CMAKE_CURRENT_LIST_DIR}/pgx.cpp
     # ${CMAKE_CURRENT_LIST_DIR}/pgx_test.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/pgx_stress.cpp
+    # ${CMAKE_CURRENT_LIST_DIR}/pgx_stress.cpp
+    
+    ${CMAKE_CURRENT_LIST_DIR}/pgx_bunny.cpp
 )
 
 pico_set_program_name(pgx "pgx")
@@ -89,6 +91,7 @@ target_link_libraries(pgx
     pico_stdlib
     pico_sync
     hardware_spi
+    hardware_dma
     hardware_timer
     hardware_clocks
 )
