@@ -224,7 +224,7 @@ void setup_3d_renderer() {
     // Enable backface culling
     renderer.setCulling(1);
     
-    // Set texture quality (CORRECTED: use proper constants)
+    // Set texture quality
     renderer.setTextureQuality(SHADER_TEXTURE_NEAREST);
     renderer.setTextureWrappingMode(SHADER_TEXTURE_WRAP_POW2);
 }
@@ -263,7 +263,7 @@ int main() {
         img_render.fillScreen(RGB565_Cyan);  // Clear to cyan background
         renderer.clearZbuffer();              // Clear depth buffer
         
-        // Render mesh based on current mode (CORRECTED: use proper constants)
+        // Render mesh based on current mode
         switch(loop_number % 4) {
             case 0: // Gouraud shading + texture
                 renderer.setShaders(SHADER_GOURAUD | SHADER_TEXTURE);
